@@ -2,7 +2,7 @@
 
 App that generates schedules for students based on the courses they have selected.
 
-<img width="824" alt="Screen Shot 2022-01-14 at 10 00 27 PM" src="https://user-images.githubusercontent.com/41162345/149606514-e94be2b7-a7a6-40cf-895d-5f15efa8414f.png">
+<img width="1437" alt="Screen Shot 2022-01-14 at 10 01 22 PM" src="https://user-images.githubusercontent.com/41162345/149606544-cf93a8e9-0e51-4aea-a636-de606ac074b8.png">
 
 ### Current Capabilities
 - Allows students to add up to 6 courses to cart (second column) and generate appropriate schedules.
