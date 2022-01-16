@@ -12,3 +12,5 @@ def getCourseDetail(request, id):
     r = requests.get('https://penncourseplan.com/api/base/current/courses/' + id)
     temp = json.loads(r.text)
     return Response(temp)
+
+

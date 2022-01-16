@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('search/<str:query>', views.getCourses, name = "courses"),
-    path('course/<str:courseid>', views.getCourse, name = "course")
+    path('course/<str:courseid>', views.getCourse, name = "course"),
+    path('scheduler', views.generateSchedule, name = 'scheduler')
 ]

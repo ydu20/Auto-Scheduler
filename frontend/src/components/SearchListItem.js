@@ -16,7 +16,6 @@ const SearchListItem = ({course, cart, setCart}) => {
         const newCart = [...cart]
         let response = await fetch('http://127.0.0.1:8000/api/course/' + course.id)
         let data = await response.json()
-        console.log("YOYOYOYOYO")
         console.log(data)
         newCart.push(data)
         setCart(newCart)

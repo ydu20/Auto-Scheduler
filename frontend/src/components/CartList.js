@@ -6,11 +6,10 @@ const CartList = ({cart, setCart}) => {
     return (
         <div>
             {cart.map((course, index) => (
-                <CartListItem course = {course} />
+                <CartListItem course = {course} cart = {cart} setCart = {setCart}/>
             ))}
         </div>
     )
-    
 }
 
 export default CartList

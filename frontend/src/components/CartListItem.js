@@ -2,11 +2,13 @@ import React from 'react'
 import {useState} from 'react'
 
 
-const CartListItem  = ({course}) => {
+const CartListItem  = ({course, cart, setCart}) => {
 
-    const addToSchedule = () => {}
+    const addToSchedule = () => {
+        // not yet implemented
+    }
     
-    const [collapsed, setCollapsed] = useState(collapsed)
+    const [collapsed, setCollapsed] = useState(true)
 
     const generateSection = (section) => {
         var secid = section.id
@@ -18,11 +20,23 @@ const CartListItem  = ({course}) => {
         return ("Sec " + secid + ": " +  times.join(", "))
     }
 
+    const removeFromCart = () => {
+        const newCart = []
+        cart.forEach((item, i) => {
+            if (item !== course) {
+                newCart.push(item);
+            }
+        })
+        setCart(newCart)
+    }
+
     return (
         <div>
             <div className = "cart-list-item">
                 <button className = "collapse-button"
-                    onClick={() => setCollapsed(!collapsed)}>{collapsed ? '+' : '-'}</button>
+                    onClick={() => setCollapsed(!collapsed)}>{collapsed ? '+' : '–'}
+                </button>
+                <button onClick = {() => removeFromCart()}>x</button>
                 <h3>{course.id}</h3>
                 <p>{course.title}</p>
             </div>
