@@ -7,7 +7,6 @@ from .sched_gen.sched_gen import generate_schedule
 # Create your views here.
 
 
-
 @api_view(['GET'])
 def getCourses(request, query):
     return searchCourses(request, query)
